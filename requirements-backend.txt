@@ -1,0 +1,52 @@
+# Backend-only dependency set for unified FastAPI AI app.
+# Pin versions for reproducible builds. Adjust as needed.
+
+# --- Core Web Framework ---
+fastapi==0.110.0
+uvicorn[standard]==0.29.0
+python-multipart==0.0.9
+pydantic==2.6.4
+
+# --- Production Server (Linux/Container) ---
+# Gunicorn not needed on pure Windows; safe to remove if using only uvicorn.
+gunicorn==21.2.0
+
+# --- AI / LLM Integration ---
+openai==1.13.3
+tiktoken==0.6.0
+
+# --- Document / File Processing ---
+PyPDF2==3.0.1
+python-docx==0.8.11      # Optional (Word docs)
+openpyxl==3.1.2          # Optional (Excel support)
+
+# --- DataFrame / CSV ---
+pandas==2.2.1
+
+# --- Audio / Speech ---
+gTTS==2.5.1
+pydub==0.25.1            # Optional audio manipulation
+
+# --- Translation / Language Detection ---
+deep-translator==1.11.4
+langdetect==1.0.9
+
+# --- Environment / Utilities ---
+python-dotenv==1.0.1
+requests==2.31.0
+
+# --- Optional Vision / Imaging (comment out if unused) ---
+# pillow==10.2.0
+# opencv-python-headless==4.9.0.80
+# numpy==1.26.4
+
+# --- Optional Security / Rate Limiting ---
+# slowapi==0.1.9
+
+# --- Optional Logging / Observability ---
+# structlog==24.1.0
+# rich==13.7.0
+
+# --- Optional LangChain (uncomment if you use it) ---
+# langchain==0.1.13
+# langchain-openai==0.0.8
